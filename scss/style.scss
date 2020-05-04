@@ -14,7 +14,9 @@
 // Переменные
 :root {
   --container: 1140px;
+  --black: #010b11;
   --feature_bg_color: #f7faff;
+  --button_secondary_color: #ffffff;
   --button_primary_color: #2976f4;
 }
 
@@ -52,6 +54,8 @@ a {
 body {
   font-size: 15px;
   font-weight: 400;
+  color: var(--black);
+  letter-spacing: 23;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -81,14 +85,23 @@ body {
 .button {
   padding: 20px 40px;
   font-size: 1.06em;
+  font-weight: 700;
+  border-radius: 5px;
+  &__secondary {
+    border: 1px solid var(--button_primary_color);
+    background-color: var(--button_primary_color);
+    color: var(--button_secondary_color);
+    &:hover {
+      color: var(--button_primary_color);
+      background-color: #ffffff;
+    }
+  }
   &__primary {
-    border-radius: 5px;
-    font-weight: 700;
     color: var(--button_primary_color);
     border: 1px solid var(--button_primary_color);
     &:hover {
-      color: lighten(#2976f4, 5);
-      border-color: lighten(#2976f4, 5);
+      color: #ffffff;
+      background: var(--button_primary_color);
     }
   }
 }
@@ -164,6 +177,40 @@ body {
   }
   &-content {
     margin-top: 20px;
+    &__wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-title {
+      padding: 40px 50px;
+      background-color: #ffffff;
+      position: relative;
+      display: block;
+      z-index: 1;
+      margin-right: -285px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    &__suptitle {
+      font-weight: 400;
+    }
+    &__title {
+      font-size: 2.8em;
+      font-weight: 700;
+      letter-spacing: 57;
+      margin: 10px 0;
+    }
+    &__subtitle {
+      margin-bottom: 40px;
+    }
+    &-image {
+      position: relative;
+      z-index: 0;
+    }
   }
 }
 
@@ -261,6 +308,64 @@ body {
       font-size: 5.33em;
       color: rgba(0, 0, 0, 0.1);
       transform: translate(-50%, -50%);
+    }
+  }
+}
+
+// Отзывы
+
+.services {
+  background-color: #f7faff;
+  &-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-right: 50px;
+    flex-basis: 340px;
+    border-right: 1px solid #dee2e7;
+  }
+  &__item {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &--active,
+    &:hover {
+      border-radius: 5px;
+      color: #ffffff;
+      background-color: #000000;
+      padding: 20px 30px;
+    }
+  }
+  &-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-basis: 640px;
+    padding: 0 50px;
+
+    &__item:not(:last-child) {
+      margin-right: 45px;
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    & .button {
+      margin: 40px 0;
     }
   }
 }

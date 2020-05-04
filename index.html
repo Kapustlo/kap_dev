@@ -12,6 +12,7 @@
     <title>kapDEV - Главная страница</title>
   </head>
   <body>
+    <!-- Временно без адаптива! -->
     <!-- Шапка -->
     <header class="header" id="header">
       <!-- Контейнер -->
@@ -51,7 +52,25 @@
           </nav>
           <!-- /Навигация -->
         </div>
-        <div class="header-content"></div>
+        <div class="header-content">
+          <div class="header-content__wrap">
+            <div class="header-content-title">
+              <h5 class="header-content__suptitle">
+                Вместе с платформой Shopify
+              </h5>
+              <h1 class="header-content__title">Диджитализируем ваш бизнес</h1>
+              <p class="header-content__subtitle">
+                Мы делаем то, что продает ваши продукты и услуги. Улучшаем то, что есть. Создаем то, чего не было.
+              </p>
+              <a href="#" class="button button__secondary">
+                Узнать детали
+              </a>
+            </div>
+            <div class="header-content-image">
+              <img src="./assets/img/background.jpg" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
       <!-- /Контейнер -->
     </header>
@@ -171,7 +190,7 @@
     </section>
     <!-- /Портфолио -->
 
-    <!-- Наши услуги -->
+    <!-- Shopify -->
     <section class="shopify section" id="shopify">
       <!-- Контейнер -->
       <div class="container">
@@ -209,13 +228,45 @@
       </div>
       <!-- /Контейнер -->
     </section>
+    <!-- /Shopify -->
+
+    <!-- Наши услуги -->
+    <section class="services section" id="services">
+      <!-- Контейнер -->
+      <div class="container">
+        <div class="services-header section-header">
+          <h2 class="services-header__title section-header__title">Наши услуги</h2>
+        </div>
+
+        <div class="services-content">
+          <ul class="services__list">
+            <li class="services__item">Создание приложений</li>
+            <li class="services__item">Создание интернет-магазина</li>
+            <li class="services__item">Создание шаблона для магазина</li>
+            <li class="services__item">Создание плагинов для панели администратора</li>
+          </ul>
+
+          <div class="services-panel">
+            <h2 class="services-panel__title">Разработка E-commerce проектов для вашего бизнеса</h2>
+            <p class="services-panel__description">Берём на себя весь спектр производственных работ от разработки, основанной на данных аналитики, до сложных интеграций в рамках поддержки и развития интернет-магазина.</p>
+            <a href="#" class="button button__primary">Узнать стоимость</a>
+            <ul class="services-panel__list">
+              <li class="services-panel__item"><a href="#" class="services-panel__link">Консультация</a></li>
+              <li class="services-panel__item"><a href="#" class="services-panel__link">Портфолио</a></li>
+              <li class="services-panel__item"><a href="#" class="services-panel__link">Заполнить бриф</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Контейнер -->
+    </section>
     <!-- /Наши услуги -->
 
     <!-- Отзывы клиентов -->
-    <section class="feedback" id="feedback">
-      <!-- Контейнер -->
+    <section class="feedback section" id="feedback">
+      <!-- Arrow left -->
       <div class="container"></div>
-      <!-- /Контейнер -->
+      <!-- arrow right -->
     </section>
     <!-- /Отзывы клиентов -->
 
@@ -234,6 +285,13 @@
       <!-- /Контейнер -->
     </footer>
     <!-- /Подвал (Footer) -->
+
+    <!-- Модальное окно -->
+
+    <div class="modal">
+    </div>
+
+    <!-- Модальное окно -->
 
     <!-- Подключение JavaScript -->
 
